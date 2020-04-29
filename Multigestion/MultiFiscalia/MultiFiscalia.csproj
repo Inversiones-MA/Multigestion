@@ -19,9 +19,9 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <FileUpgradeFlags>0</FileUpgradeFlags>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
     <OldToolsVersion>4.0</OldToolsVersion>
-    <UpgradeBackupLocation>C:\multigestion\Backup11\</UpgradeBackupLocation>
+    <UpgradeBackupLocation>C:\Multigestion\Multigestion\Backup14\MultiFiscalia\</UpgradeBackupLocation>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <ProjectMode>SharePointCustomization</ProjectMode>
     <PublishUrl>publish\</PublishUrl>

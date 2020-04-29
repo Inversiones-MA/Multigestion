@@ -21,9 +21,9 @@
     <SccProvider>SAK</SccProvider>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <FileUpgradeFlags>0</FileUpgradeFlags>
-    <UpgradeBackupLocation>C:\multigestion\Backup9\</UpgradeBackupLocation>
+    <UpgradeBackupLocation>C:\Multigestion\Multigestion\Backup14\MultiAdministracion\</UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
-    <FileUpgradeFlags>0</FileUpgradeFlags>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
     <OldToolsVersion>4.0</OldToolsVersion>
     <ProjectMode>SharePointCustomization</ProjectMode>
     <PublishUrl>publish\</PublishUrl>

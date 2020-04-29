@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="wpCalendarioPago" List="113" Url="_catalogs/wp">
+    <File Path="wpCalendarioPago\wpCalendarioPago.webpart" Url="MultiOperacion_wpCalendarioPago.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="Custom" />
+    </File>
+  </Module>
+</Elements>

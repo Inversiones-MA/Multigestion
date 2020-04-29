@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="wpListarCftRiesgo" List="113" Url="_catalogs/wp">
+    <File Path="wpListarCftRiesgo\wpListarCftRiesgo.webpart" Url="MultiRiesgo_wpListarCftRiesgo.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="Custom" />
+    </File>
+  </Module>
+</Elements>

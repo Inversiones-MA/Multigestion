@@ -19,9 +19,9 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <FileUpgradeFlags>0</FileUpgradeFlags>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
     <OldToolsVersion>4.0</OldToolsVersion>
-    <UpgradeBackupLocation>C:\multigestion\Backup10\</UpgradeBackupLocation>
+    <UpgradeBackupLocation>C:\Multigestion\Multigestion\Backup14\MultiContabilidad\</UpgradeBackupLocation>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <ProjectMode>SharePointCustomization</ProjectMode>
     <PublishUrl>publish\</PublishUrl>
