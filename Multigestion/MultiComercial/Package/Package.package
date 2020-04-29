@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="5bd8c87c-75d0-4f24-8e5f-46b010bb6960" solutionId="5bd8c87c-75d0-4f24-8e5f-46b010bb6960" resetWebServer="false" sharePointProductVersion="15.0" name="MultiComercial" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="MultigestionUtilidades.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\MultigestionUtilidades\MultigestionUtilidades.csproj" />
+    <projectOutputAssembly location="ClasesNegocio.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\ClasesNegocio\ClasesNegocio.csproj" />
+    <projectOutputAssembly location="Bd.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\Bd\Bd.csproj" />
+  </assemblies>
+  <features>
+    <featureReference itemId="137623f7-5eb8-4b8a-af99-e3722658c171" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="db5e3e18-f548-408f-afca-f08b6319df6a" />
+    <projectItemReference itemId="cc1d8144-01ea-4c6f-ac8b-b6b87980ba5e" />
+    <projectItemReference itemId="0dce99c4-9259-4abb-86dd-6abfc158d37c" />
+  </projectItems>
+</package>

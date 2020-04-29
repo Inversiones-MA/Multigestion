@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="wpCarteraComercial" List="113" Url="_catalogs/wp">
+    <File Path="wpCarteraComercial\wpCarteraComercial.webpart" Url="MultiComercial_wpCarteraComercial.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="Custom" />
+    </File>
+  </Module>
+</Elements>

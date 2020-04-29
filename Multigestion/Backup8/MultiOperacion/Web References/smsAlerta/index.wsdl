@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://api.masterbase.com/soap/users/v3" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://api.masterbase.com/soap/users/v3" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://api.masterbase.com/soap/users/v3">
+      <s:element name="mbUsExiste10">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsExiste10Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mbUsExiste10Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsValida10">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contrasena" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsValida10Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mbUsValida10Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsModificarEmail10">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NuevoEmail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsModificarEmail10Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mbUsModificarEmail10Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsAnular10">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsAnular10Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mbUsAnular10Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsDatos10">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsDatos10Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mbUsDatos10Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsInsertar10">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Insert" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsInsertar10Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mbUsInsertar10Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsModificar10">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Update" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsModificar10Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mbUsModificar10Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsModificarSolo10">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Update" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsModificarSolo10Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mbUsModificarSolo10Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsListadoEmailsSeleccionados10">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FechaIni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FechaFin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Filtro" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsListadoEmailsSeleccionados10Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mbUsListadoEmailsSeleccionados10Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsListadoEmailsFiltroEstatico10">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliPwd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idFiltro" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsListadoEmailsFiltroEstatico10Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mbUsListadoEmailsFiltroEstatico10Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsListadoRutSeleccionados10">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FechaIni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FechaFin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Filtro" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsListadoRutSeleccionados10Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mbUsListadoRutSeleccionados10Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsObtUsuariosXCampo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="campo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="valor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsObtUsuariosXCampoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mbUsObtUsuariosXCampoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsDatosByRut10">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Rut" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mbUsDatosByRut10Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mbUsDatosByRut10Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="mbUsExiste10SoapIn">
+    <wsdl:part name="parameters" element="tns:mbUsExiste10" />
+  </wsdl:message>
+  <wsdl:message name="mbUsExiste10SoapOut">
+    <wsdl:part name="parameters" element="tns:mbUsExiste10Response" />
+  </wsdl:message>
+  <wsdl:message name="mbUsValida10SoapIn">
+    <wsdl:part name="parameters" element="tns:mbUsValida10" />
+  </wsdl:message>
+  <wsdl:message name="mbUsValida10SoapOut">
+    <wsdl:part name="parameters" element="tns:mbUsValida10Response" />
+  </wsdl:message>
+  <wsdl:message name="mbUsModificarEmail10SoapIn">
+    <wsdl:part name="parameters" element="tns:mbUsModificarEmail10" />
+  </wsdl:message>
+  <wsdl:message name="mbUsModificarEmail10SoapOut">
+    <wsdl:part name="parameters" element="tns:mbUsModificarEmail10Response" />
+  </wsdl:message>
+  <wsdl:message name="mbUsAnular10SoapIn">
+    <wsdl:part name="parameters" element="tns:mbUsAnular10" />
+  </wsdl:message>
+  <wsdl:message name="mbUsAnular10SoapOut">
+    <wsdl:part name="parameters" element="tns:mbUsAnular10Response" />
+  </wsdl:message>
+  <wsdl:message name="mbUsDatos10SoapIn">
+    <wsdl:part name="parameters" element="tns:mbUsDatos10" />
+  </wsdl:message>
+  <wsdl:message name="mbUsDatos10SoapOut">
+    <wsdl:part name="parameters" element="tns:mbUsDatos10Response" />
+  </wsdl:message>
+  <wsdl:message name="mbUsInsertar10SoapIn">
+    <wsdl:part name="parameters" element="tns:mbUsInsertar10" />
+  </wsdl:message>
+  <wsdl:message name="mbUsInsertar10SoapOut">
+    <wsdl:part name="parameters" element="tns:mbUsInsertar10Response" />
+  </wsdl:message>
+  <wsdl:message name="mbUsModificar10SoapIn">
+    <wsdl:part name="parameters" element="tns:mbUsModificar10" />
+  </wsdl:message>
+  <wsdl:message name="mbUsModificar10SoapOut">
+    <wsdl:part name="parameters" element="tns:mbUsModificar10Response" />
+  </wsdl:message>
+  <wsdl:message name="mbUsModificarSolo10SoapIn">
+    <wsdl:part name="parameters" element="tns:mbUsModificarSolo10" />
+  </wsdl:message>
+  <wsdl:message name="mbUsModificarSolo10SoapOut">
+    <wsdl:part name="parameters" element="tns:mbUsModificarSolo10Response" />
+  </wsdl:message>
+  <wsdl:message name="mbUsListadoEmailsSeleccionados10SoapIn">
+    <wsdl:part name="parameters" element="tns:mbUsListadoEmailsSeleccionados10" />
+  </wsdl:message>
+  <wsdl:message name="mbUsListadoEmailsSeleccionados10SoapOut">
+    <wsdl:part name="parameters" element="tns:mbUsListadoEmailsSeleccionados10Response" />
+  </wsdl:message>
+  <wsdl:message name="mbUsListadoEmailsFiltroEstatico10SoapIn">
+    <wsdl:part name="parameters" element="tns:mbUsListadoEmailsFiltroEstatico10" />
+  </wsdl:message>
+  <wsdl:message name="mbUsListadoEmailsFiltroEstatico10SoapOut">
+    <wsdl:part name="parameters" element="tns:mbUsListadoEmailsFiltroEstatico10Response" />
+  </wsdl:message>
+  <wsdl:message name="mbUsListadoRutSeleccionados10SoapIn">
+    <wsdl:part name="parameters" element="tns:mbUsListadoRutSeleccionados10" />
+  </wsdl:message>
+  <wsdl:message name="mbUsListadoRutSeleccionados10SoapOut">
+    <wsdl:part name="parameters" element="tns:mbUsListadoRutSeleccionados10Response" />
+  </wsdl:message>
+  <wsdl:message name="mbUsObtUsuariosXCampoSoapIn">
+    <wsdl:part name="parameters" element="tns:mbUsObtUsuariosXCampo" />
+  </wsdl:message>
+  <wsdl:message name="mbUsObtUsuariosXCampoSoapOut">
+    <wsdl:part name="parameters" element="tns:mbUsObtUsuariosXCampoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mbUsDatosByRut10SoapIn">
+    <wsdl:part name="parameters" element="tns:mbUsDatosByRut10" />
+  </wsdl:message>
+  <wsdl:message name="mbUsDatosByRut10SoapOut">
+    <wsdl:part name="parameters" element="tns:mbUsDatosByRut10Response" />
+  </wsdl:message>
+  <wsdl:portType name="MasterbaseUsuarios10Soap">
+    <wsdl:operation name="mbUsExiste10">
+      <wsdl:input message="tns:mbUsExiste10SoapIn" />
+      <wsdl:output message="tns:mbUsExiste10SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mbUsValida10">
+      <wsdl:input message="tns:mbUsValida10SoapIn" />
+      <wsdl:output message="tns:mbUsValida10SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mbUsModificarEmail10">
+      <wsdl:input message="tns:mbUsModificarEmail10SoapIn" />
+      <wsdl:output message="tns:mbUsModificarEmail10SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mbUsAnular10">
+      <wsdl:input message="tns:mbUsAnular10SoapIn" />
+      <wsdl:output message="tns:mbUsAnular10SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mbUsDatos10">
+      <wsdl:input message="tns:mbUsDatos10SoapIn" />
+      <wsdl:output message="tns:mbUsDatos10SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mbUsInsertar10">
+      <wsdl:input message="tns:mbUsInsertar10SoapIn" />
+      <wsdl:output message="tns:mbUsInsertar10SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mbUsModificar10">
+      <wsdl:input message="tns:mbUsModificar10SoapIn" />
+      <wsdl:output message="tns:mbUsModificar10SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mbUsModificarSolo10">
+      <wsdl:input message="tns:mbUsModificarSolo10SoapIn" />
+      <wsdl:output message="tns:mbUsModificarSolo10SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mbUsListadoEmailsSeleccionados10">
+      <wsdl:input message="tns:mbUsListadoEmailsSeleccionados10SoapIn" />
+      <wsdl:output message="tns:mbUsListadoEmailsSeleccionados10SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mbUsListadoEmailsFiltroEstatico10">
+      <wsdl:input message="tns:mbUsListadoEmailsFiltroEstatico10SoapIn" />
+      <wsdl:output message="tns:mbUsListadoEmailsFiltroEstatico10SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mbUsListadoRutSeleccionados10">
+      <wsdl:input message="tns:mbUsListadoRutSeleccionados10SoapIn" />
+      <wsdl:output message="tns:mbUsListadoRutSeleccionados10SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mbUsObtUsuariosXCampo">
+      <wsdl:input message="tns:mbUsObtUsuariosXCampoSoapIn" />
+      <wsdl:output message="tns:mbUsObtUsuariosXCampoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mbUsDatosByRut10">
+      <wsdl:input message="tns:mbUsDatosByRut10SoapIn" />
+      <wsdl:output message="tns:mbUsDatosByRut10SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MasterbaseUsuarios10Soap" type="tns:MasterbaseUsuarios10Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="mbUsExiste10">
+      <soap:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsExiste10" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsValida10">
+      <soap:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsValida10" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsModificarEmail10">
+      <soap:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsModificarEmail10" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsAnular10">
+      <soap:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsAnular10" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsDatos10">
+      <soap:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsDatos10" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsInsertar10">
+      <soap:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsInsertar10" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsModificar10">
+      <soap:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsModificar10" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsModificarSolo10">
+      <soap:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsModificarSolo10" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsListadoEmailsSeleccionados10">
+      <soap:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsListadoEmailsSeleccionados10" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsListadoEmailsFiltroEstatico10">
+      <soap:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsListadoEmailsFiltroEstatico10" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsListadoRutSeleccionados10">
+      <soap:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsListadoRutSeleccionados10" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsObtUsuariosXCampo">
+      <soap:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsObtUsuariosXCampo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsDatosByRut10">
+      <soap:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsDatosByRut10" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MasterbaseUsuarios10Soap12" type="tns:MasterbaseUsuarios10Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="mbUsExiste10">
+      <soap12:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsExiste10" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsValida10">
+      <soap12:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsValida10" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsModificarEmail10">
+      <soap12:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsModificarEmail10" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsAnular10">
+      <soap12:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsAnular10" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsDatos10">
+      <soap12:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsDatos10" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsInsertar10">
+      <soap12:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsInsertar10" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsModificar10">
+      <soap12:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsModificar10" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsModificarSolo10">
+      <soap12:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsModificarSolo10" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsListadoEmailsSeleccionados10">
+      <soap12:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsListadoEmailsSeleccionados10" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsListadoEmailsFiltroEstatico10">
+      <soap12:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsListadoEmailsFiltroEstatico10" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsListadoRutSeleccionados10">
+      <soap12:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsListadoRutSeleccionados10" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsObtUsuariosXCampo">
+      <soap12:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsObtUsuariosXCampo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mbUsDatosByRut10">
+      <soap12:operation soapAction="https://api.masterbase.com/soap/users/v3/mbUsDatosByRut10" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MasterbaseUsuarios10">
+    <wsdl:port name="MasterbaseUsuarios10Soap" binding="tns:MasterbaseUsuarios10Soap">
+      <soap:address location="https://api.masterbase.com/soap/users/v3/masterbaseusuarios10.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MasterbaseUsuarios10Soap12" binding="tns:MasterbaseUsuarios10Soap12">
+      <soap12:address location="https://api.masterbase.com/soap/users/v3/masterbaseusuarios10.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

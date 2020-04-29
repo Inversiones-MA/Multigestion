@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="wpDevolverOperacionFiscalia" List="113" Url="_catalogs/wp">
+    <File Path="wpDevolverOperacionFiscalia\wpDevolverOperacionFiscalia.webpart" Url="MultiFiscalia_wpDevolverOperacionFiscalia.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="Custom" />
+    </File>
+  </Module>
+</Elements>

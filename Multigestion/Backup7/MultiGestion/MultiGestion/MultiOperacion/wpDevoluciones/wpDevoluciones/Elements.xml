@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="wpDevoluciones" List="113" Url="_catalogs/wp">
+    <File Path="wpDevoluciones\wpDevoluciones.webpart" Url="MultiOperacion_wpDevoluciones.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="Custom" />
+    </File>
+  </Module>
+</Elements>

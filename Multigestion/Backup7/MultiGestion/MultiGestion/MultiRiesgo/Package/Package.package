@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="bb954309-22fa-47ea-b5f2-28d683741256" solutionId="bb954309-22fa-47ea-b5f2-28d683741256" resetWebServer="false" sharePointProductVersion="15.0" name="MultiRiesgo" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="MultigestionUtilidades.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\MultigestionUtilidades\MultigestionUtilidades.csproj" />
+  </assemblies>
+  <features>
+    <featureReference itemId="0271af74-d2b9-4f94-9320-aedeeacd7fa2" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="31776cbd-08bf-4b28-b6bb-42e459638a2f" />
+    <projectItemReference itemId="fbdf30c6-01e8-4e4b-b1f4-f33fde8b005e" />
+    <projectItemReference itemId="e45e4c0c-7086-4c98-b387-ed1c5288140d" />
+  </projectItems>
+</package>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="9ec27f5a-a0f5-4348-a060-1fd63e39e8ba" solutionId="9ec27f5a-a0f5-4348-a060-1fd63e39e8ba" resetWebServer="false" sharePointProductVersion="15.0" name="MultiOperacion" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="MultigestionUtilidades.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\MultigestionUtilidades\MultigestionUtilidades.csproj" />
+  </assemblies>
+  <features>
+    <featureReference itemId="1cfeb280-45b3-4b85-9419-fd773e62e781" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="703bcf7f-d998-40f8-b9c5-79c0759f47d1" />
+    <projectItemReference itemId="a2112446-3a64-4db0-8149-342f12a132e6" />
+    <projectItemReference itemId="934a1696-a210-44e5-8e38-80bd0180a814" />
+  </projectItems>
+</package>

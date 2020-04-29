@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="wpReporte1" List="113" Url="_catalogs/wp">
+    <File Path="wpReporte1\wpReporte1.webpart" Url="MultiReportes_wpReporte1.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="Custom" />
+    </File>
+  </Module>
+</Elements>

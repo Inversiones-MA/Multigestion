@@ -1,0 +1,791 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CDAF9A4-67CA-43AF-B79C-1A508748467C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MultiComercial</RootNamespace>
+    <AssemblyName>MultiComercial</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ActiveDeploymentConfiguration>Default</ActiveDeploymentConfiguration>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ProjectMode>SharePointCustomization</ProjectMode>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.1\lib\net40\AjaxControlToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Resources.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ErrorHandling, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8946667303d14914, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\referencias\ErrorHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlToOpenXml, Version=1.5.0.0, Culture=neutral, PublicKeyToken=6ad79d83e2b60e63, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlToOpenXml.dll.1.5.0\lib\net45\HtmlToOpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.XmlTransform, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Xdt.2.1.1\lib\net40\Microsoft.Web.XmlTransform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Doc, Version=6.0.5.4040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Doc.6.0.5\lib\net40\Spire.Doc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.6.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Doc.6.0.5\lib\net40\Spire.License.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=3.9.263.4040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Doc.6.0.5\lib\net40\Spire.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TridentGoalSeek, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TridentGoalSeek.1.0.2\lib\TridentGoalSeek.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="newTest\wpNewTest\wpNewTest.ascx.cs">
+      <DependentUpon>wpNewTest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="newTest\wpNewTest\wpNewTest.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpNewTest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="wpAdministracion\wpAdministracion\wpAdministracion.ascx.cs">
+      <DependentUpon>wpAdministracion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpAdministracion\wpAdministracion\wpAdministracion.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpAdministracion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpCarteraComeral\wpCarteraComercial\wpCarteraComercial.ascx.cs">
+      <DependentUpon>wpCarteraComercial.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpCarteraComeral\wpCarteraComercial\wpCarteraComercial.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpCarteraComercial.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpClientes\wpClientes\wpClientes.ascx.cs">
+      <DependentUpon>wpClientes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpClientes\wpClientes\wpClientes.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpClientes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpContactosEmpresa\wpContactosEmpresa\wpContactosEmpresa.ascx.cs">
+      <DependentUpon>wpContactosEmpresa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpContactosEmpresa\wpContactosEmpresa\wpContactosEmpresa.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpContactosEmpresa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpCotizador\wpCotizador\wpCotizador.ascx.cs">
+      <DependentUpon>wpCotizador.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpCotizador\wpCotizador\wpCotizador.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpCotizador.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDatosEmpresa\wpDatosEmpresa\wpDatosEmpresa.ascx.cs">
+      <DependentUpon>wpDatosEmpresa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDatosEmpresa\wpDatosEmpresa\wpDatosEmpresa.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpDatosEmpresa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDatosGarantias\wpDatosGarantias\wpDatosGarantias.ascx.cs">
+      <DependentUpon>wpDatosGarantias.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDatosGarantias\wpDatosGarantias\wpDatosGarantias.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpDatosGarantias.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDatosOperacion\wpDatosOperacion\wpDatosOperacion.ascx.cs">
+      <DependentUpon>wpDatosOperacion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDatosOperacion\wpDatosOperacion\wpDatosOperacion.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpDatosOperacion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDeudaSBIF\wpDeudaSBIF\wpDeudaSBIF.ascx.cs">
+      <DependentUpon>wpDeudaSBIF.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDeudaSBIF\wpDeudaSBIF\wpDeudaSBIF.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpDeudaSBIF.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDevolverOperacion\wpRechazoOperacion\wpRechazoOperacion.ascx.cs">
+      <DependentUpon>wpRechazoOperacion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDevolverOperacion\wpRechazoOperacion\wpRechazoOperacion.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpRechazoOperacion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDirecciones\wpDirecciones\wpDirecciones.ascx.cs">
+      <DependentUpon>wpDirecciones.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDirecciones\wpDirecciones\wpDirecciones.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpDirecciones.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDirectorio\wpDirectorio\wpDirectorio.ascx.cs">
+      <DependentUpon>wpDirectorio.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDirectorio\wpDirectorio\wpDirectorio.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpDirectorio.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDocumentosEmpresa\wpDocumentosEmpresa\wpDocumentosEmpresa.ascx.cs">
+      <DependentUpon>wpDocumentosEmpresa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDocumentosEmpresa\wpDocumentosEmpresa\wpDocumentosEmpresa.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpDocumentosEmpresa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpEdicionEmpresa\wpEdicionEmpresa\wpEdicionEmpresa.ascx.cs">
+      <DependentUpon>wpEdicionEmpresa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpEdicionEmpresa\wpEdicionEmpresa\wpEdicionEmpresa.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpEdicionEmpresa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpEmpresaAdministracion\wpEmpresaAdministracion\wpEmpresaAdministracion.ascx.cs">
+      <DependentUpon>wpEmpresaAdministracion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpEmpresaAdministracion\wpEmpresaAdministracion\wpEmpresaAdministracion.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpEmpresaAdministracion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpEmpresasRelacionadas\wpEmpresasRelacionadas\wpEmpresasRelacionadas.ascx.cs">
+      <DependentUpon>wpEmpresasRelacionadas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpEmpresasRelacionadas\wpEmpresasRelacionadas\wpEmpresasRelacionadas.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpEmpresasRelacionadas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpEnviarComercial\wpEnviarComercial\wpEnviarComercial.ascx.cs">
+      <DependentUpon>wpEnviarComercial.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpEnviarComercial\wpEnviarComercial\wpEnviarComercial.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpEnviarComercial.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpIngresoEmpresa\wpIngresoEmpresa\wpIngresoEmpresa.ascx.cs">
+      <DependentUpon>wpIngresoEmpresa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpIngresoEmpresa\wpIngresoEmpresa\wpIngresoEmpresa.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpIngresoEmpresa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpIngresoGarantia\wpIngresoGarantia\wpIngresoGarantia.ascx.cs">
+      <DependentUpon>wpIngresoGarantia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpIngresoGarantia\wpIngresoGarantia\wpIngresoGarantia.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpIngresoGarantia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpIngresoOperacion\wpIngresoOperacion\wpIngresoOperacion.ascx.cs">
+      <DependentUpon>wpIngresoOperacion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpIngresoOperacion\wpIngresoOperacion\wpIngresoOperacion.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpIngresoOperacion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpListarComercial\wpListarComercial\wpListarComercial.ascx.cs">
+      <DependentUpon>wpListarComercial.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpListarComercial\wpListarComercial\wpListarComercial.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpListarComercial.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpPersonas\wpPersonas\wpPersonas.ascx.cs">
+      <DependentUpon>wpPersonas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpPersonas\wpPersonas\wpPersonas.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpPersonas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpProveedoresEmpresa\wpProveedoresEmpresa\wpProveedoresEmpresa.ascx.cs">
+      <DependentUpon>wpProveedoresEmpresa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpProveedoresEmpresa\wpProveedoresEmpresa\wpProveedoresEmpresa.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpProveedoresEmpresa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpProveedores\wpProveedores\wpProveedores.ascx.cs">
+      <DependentUpon>wpProveedores.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpProveedores\wpProveedores\wpProveedores.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpProveedores.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpRechazo\wpRechazo\wpRechazo.ascx.cs">
+      <DependentUpon>wpRechazo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpRechazo\wpRechazo\wpRechazo.ascx.g.cs">
+      <DependentUpon>wpRechazo.ascx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="wpSimulacion\wpSimulacion\wpSimulacion.ascx.cs">
+      <DependentUpon>wpSimulacion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpSimulacion\wpSimulacion\wpSimulacion.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpSimulacion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpSociosAccionistas\wpSociosAccionistas\wpSociosAccionistas.ascx.cs">
+      <DependentUpon>wpSociosAccionistas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpSociosAccionistas\wpSociosAccionistas\wpSociosAccionistas.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpSociosAccionistas.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{137623f7-5eb8-4b8a-af99-e3722658c171}</FeatureId>
+    </None>
+    <None Include="Images\MultiComercial\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0dce99c4-9259-4abb-86dd-6abfc158d37c}</SharePointProjectItemId>
+    </None>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cc1d8144-01ea-4c6f-ac8b-b6b87980ba5e}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{db5e3e18-f548-408f-afca-f08b6319df6a}</SharePointProjectItemId>
+    </None>
+    <None Include="newTest\wpNewTest\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d7c5a26a-0d3e-41e5-b751-89c68b3a2c33}</SharePointProjectItemId>
+    </None>
+    <None Include="newTest\wpNewTest\wpNewTest.webpart" />
+    <None Include="packages.config" />
+    <None Include="Package\Package.package">
+      <PackageId>{5bd8c87c-75d0-4f24-8e5f-46b010bb6960}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="wpAdministracion\wpAdministracion\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{95d25990-c862-4a4b-ad23-d54e54a46135}</SharePointProjectItemId>
+    </None>
+    <None Include="wpAdministracion\wpAdministracion\wpAdministracion.webpart" />
+    <None Include="wpCarteraComeral\wpCarteraComercial\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{79ae2eab-9083-4349-9086-6ac680b59ff5}</SharePointProjectItemId>
+    </None>
+    <None Include="wpCarteraComeral\wpCarteraComercial\wpCarteraComercial.webpart" />
+    <None Include="wpClientes\wpClientes\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b3b280d5-1631-45d1-8fe6-c42f908dbe91}</SharePointProjectItemId>
+    </None>
+    <None Include="wpClientes\wpClientes\wpClientes.webpart" />
+    <None Include="wpContactosEmpresa\wpContactosEmpresa\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{26d693e7-1701-47e5-9490-450239f0f877}</SharePointProjectItemId>
+    </None>
+    <None Include="wpContactosEmpresa\wpContactosEmpresa\wpContactosEmpresa.webpart" />
+    <None Include="wpCotizador\wpCotizador\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{66fd6e7c-de23-4f11-9cd7-82bdf96b0f9c}</SharePointProjectItemId>
+    </None>
+    <None Include="wpCotizador\wpCotizador\wpCotizador.webpart" />
+    <None Include="wpDatosEmpresa\wpDatosEmpresa\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a8371f54-122a-45b9-ac49-d95b9b2b98df}</SharePointProjectItemId>
+    </None>
+    <None Include="wpDatosEmpresa\wpDatosEmpresa\wpDatosEmpresa.webpart" />
+    <None Include="wpDatosGarantias\wpDatosGarantias\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bc4483a4-909d-4ed9-982d-284ae05f50c7}</SharePointProjectItemId>
+    </None>
+    <None Include="wpDatosGarantias\wpDatosGarantias\wpDatosGarantias.webpart" />
+    <None Include="wpDatosOperacion\wpDatosOperacion\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{26fd04b6-31d3-4e80-b6bf-a68d4a1b0962}</SharePointProjectItemId>
+    </None>
+    <None Include="wpDatosOperacion\wpDatosOperacion\wpDatosOperacion.webpart" />
+    <None Include="wpDeudaSBIF\wpDeudaSBIF\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2c0adee7-7ea7-4bf1-b050-0320593c5ac5}</SharePointProjectItemId>
+    </None>
+    <None Include="wpDeudaSBIF\wpDeudaSBIF\wpDeudaSBIF.webpart" />
+    <None Include="wpDevolverOperacion\wpRechazoOperacion\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c970ca1a-abf1-44a6-803b-22c1b1bdd0e9}</SharePointProjectItemId>
+    </None>
+    <None Include="wpDevolverOperacion\wpRechazoOperacion\wpRechazoOperacion.webpart" />
+    <None Include="wpDirecciones\wpDirecciones\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dac31100-3754-41e4-8da1-3995246c75a7}</SharePointProjectItemId>
+    </None>
+    <None Include="wpDirecciones\wpDirecciones\wpDirecciones.webpart" />
+    <None Include="wpDirectorio\wpDirectorio\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{eff95c70-f527-420e-a98e-52ddd1710c25}</SharePointProjectItemId>
+    </None>
+    <None Include="wpDirectorio\wpDirectorio\wpDirectorio.webpart" />
+    <None Include="wpDocumentosEmpresa\wpDocumentosEmpresa\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{15ae5806-56d2-419b-87a7-8d8626b1e28c}</SharePointProjectItemId>
+    </None>
+    <None Include="wpDocumentosEmpresa\wpDocumentosEmpresa\wpDocumentosEmpresa.webpart" />
+    <None Include="wpEdicionEmpresa\wpEdicionEmpresa\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b96ad1a0-b022-45a4-b1aa-376dd9232d77}</SharePointProjectItemId>
+    </None>
+    <None Include="wpEdicionEmpresa\wpEdicionEmpresa\wpEdicionEmpresa.webpart" />
+    <None Include="wpEmpresaAdministracion\wpEmpresaAdministracion\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c5f90297-ba04-452d-b567-9e9d11f6c803}</SharePointProjectItemId>
+    </None>
+    <None Include="wpEmpresaAdministracion\wpEmpresaAdministracion\wpEmpresaAdministracion.webpart" />
+    <None Include="wpEmpresasRelacionadas\wpEmpresasRelacionadas\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{677a29a2-a168-40a4-8c57-4c5f658be168}</SharePointProjectItemId>
+    </None>
+    <None Include="wpEmpresasRelacionadas\wpEmpresasRelacionadas\wpEmpresasRelacionadas.webpart" />
+    <None Include="wpEnviarComercial\wpEnviarComercial\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f8c1fbc1-52f8-40f4-ae1e-490e8f15d4eb}</SharePointProjectItemId>
+    </None>
+    <None Include="wpEnviarComercial\wpEnviarComercial\wpEnviarComercial.webpart" />
+    <None Include="wpIngresoEmpresa\wpIngresoEmpresa\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{137e49e9-cc89-40b1-8da6-2b420ab5f4be}</SharePointProjectItemId>
+    </None>
+    <None Include="wpIngresoEmpresa\wpIngresoEmpresa\wpIngresoEmpresa.webpart" />
+    <None Include="wpIngresoGarantia\wpIngresoGarantia\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8a837dbe-9d42-42f7-a502-b7f006663d5e}</SharePointProjectItemId>
+    </None>
+    <None Include="wpIngresoGarantia\wpIngresoGarantia\wpIngresoGarantia.webpart" />
+    <None Include="wpIngresoOperacion\wpIngresoOperacion\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{86bd8867-c2ce-4753-bdce-d6cf726c0248}</SharePointProjectItemId>
+    </None>
+    <None Include="wpIngresoOperacion\wpIngresoOperacion\wpIngresoOperacion.webpart" />
+    <None Include="wpListarComercial\wpListarComercial\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{55fc7a3b-2e46-4213-98a6-365e1c0081a2}</SharePointProjectItemId>
+    </None>
+    <None Include="wpListarComercial\wpListarComercial\wpListarComercial.webpart" />
+    <None Include="wpPersonas\wpPersonas\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c863a7f8-6aab-4368-a37d-ef48eef654ad}</SharePointProjectItemId>
+    </None>
+    <None Include="wpPersonas\wpPersonas\wpPersonas.webpart" />
+    <None Include="wpProveedoresEmpresa\wpProveedoresEmpresa\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{34c37af2-d28b-4fea-9444-22cc80f0a72b}</SharePointProjectItemId>
+    </None>
+    <None Include="wpProveedoresEmpresa\wpProveedoresEmpresa\wpProveedoresEmpresa.webpart" />
+    <None Include="wpProveedores\wpProveedores\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{81ce6a54-60eb-44a1-b81b-718805d3496c}</SharePointProjectItemId>
+    </None>
+    <None Include="wpProveedores\wpProveedores\wpProveedores.webpart" />
+    <None Include="wpRechazo\wpRechazo\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6d1ff8d3-ae30-41ed-9377-dfc82d755e59}</SharePointProjectItemId>
+    </None>
+    <None Include="wpRechazo\wpRechazo\wpRechazo.webpart" />
+    <None Include="wpSimulacion\wpSimulacion\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{76af0f15-0cf9-4cda-a23d-03e09959138d}</SharePointProjectItemId>
+    </None>
+    <None Include="wpSimulacion\wpSimulacion\wpSimulacion.webpart" />
+    <None Include="wpSociosAccionistas\wpSociosAccionistas\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2480dd8b-2033-4b40-9ad0-cd5753c6037f}</SharePointProjectItemId>
+    </None>
+    <None Include="wpSociosAccionistas\wpSociosAccionistas\wpSociosAccionistas.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="Images\MultiComercial\animated-overlay.gif" />
+    <Content Include="Images\MultiComercial\Buscar.png" />
+    <Content Include="Images\MultiComercial\Datos.png" />
+    <Content Include="Images\MultiComercial\Directorio.png" />
+    <Content Include="Images\MultiComercial\Documentos.png" />
+    <Content Include="Images\MultiComercial\documentos2.png" />
+    <Content Include="Images\MultiComercial\Editar.png" />
+    <Content Include="Images\MultiComercial\Eliminar.png" />
+    <Content Include="Images\MultiComercial\Empresa.png" />
+    <Content Include="Images\MultiComercial\EmpresaRelacionada.png" />
+    <Content Include="Images\MultiComercial\Enviar.png" />
+    <Content Include="Images\MultiComercial\FBuscar.png" />
+    <Content Include="Images\MultiComercial\FDatos.png" />
+    <Content Include="Images\MultiComercial\FDirectorio.png" />
+    <Content Include="Images\MultiComercial\FDocumentos.png" />
+    <Content Include="Images\MultiComercial\FEmpresa.png" />
+    <Content Include="Images\MultiComercial\FEmpresaRelacionada.png" />
+    <Content Include="Images\MultiComercial\FEnviar.png" />
+    <Content Include="Images\MultiComercial\FGarantia.png" />
+    <Content Include="Images\MultiComercial\FNegocio.png" />
+    <Content Include="Images\MultiComercial\FSociosAccionistas.png" />
+    <Content Include="Images\MultiComercial\Garantia.png" />
+    <Content Include="Images\MultiComercial\Negocio.png" />
+    <Content Include="Images\MultiComercial\Personalize.png" />
+    <Content Include="Images\MultiComercial\SociosAccionistas.png" />
+    <Content Include="Images\MultiComercial\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Images\MultiComercial\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Images\MultiComercial\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Images\MultiComercial\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Images\MultiComercial\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Images\MultiComercial\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Images\MultiComercial\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Images\MultiComercial\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Images\MultiComercial\ui-icons_222222_256x240.png" />
+    <Content Include="Images\MultiComercial\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Images\MultiComercial\ui-icons_454545_256x240.png" />
+    <Content Include="Images\MultiComercial\ui-icons_888888_256x240.png" />
+    <Content Include="Images\MultiComercial\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Layouts\jquery.maskedinput.min.js" />
+    <Content Include="Layouts\MultiComercial\accounting.js" />
+    <Content Include="Layouts\MultiComercial\Fiscalia.js" />
+    <Content Include="Layouts\MultiComercial\FuncionesCliente.js" />
+    <Content Include="Layouts\MultiComercial\FuncionesClientes.js" />
+    <Content Include="Layouts\MultiComercial\jquery-1.11.1.js" />
+    <Content Include="Layouts\MultiComercial\jquery-1.8.3.min.js" />
+    <Content Include="Layouts\MultiComercial\jquery-ui.css" />
+    <Content Include="Layouts\MultiComercial\jquery-ui.js" />
+    <Content Include="Layouts\MultiComercial\jquery.js" />
+    <Content Include="Layouts\MultiComercial\jquery.mask.js" />
+    <Content Include="Layouts\MultiComercial\jquery.Rut.js" />
+    <Content Include="Layouts\MultiComercial\jquery.ui.datepicker-es.js" />
+    <Content Include="Layouts\MultiComercial\jquery.validate.js" />
+    <Content Include="Layouts\MultiComercial\Operacion.js" />
+    <Content Include="Layouts\MultiComercial\PAF.js" />
+    <Content Include="Layouts\MultiComercial\Validaciones.js" />
+    <Content Include="Layouts\MultiComercial\wpDatosOperacion.js" />
+    <Content Include="Layouts\MultiComercial\wpDirectorio.js" />
+    <Content Include="Layouts\MultiComercial\wpDocumentosEmpresa.js" />
+    <Content Include="Layouts\MultiComercial\wpEmpresasRelacionadas.js" />
+    <Content Include="Layouts\MultiComercial\wpPersonas.js" />
+    <Content Include="Layouts\MultiComercial\wpSociosAccionistas.js" />
+    <Content Include="Layouts\MultiComercial\wpVaciado.js" />
+    <Content Include="Layouts\MultiComercial\wpValidaciones.js" />
+    <Content Include="Layouts\PagerStyle.css" />
+    <Content Include="newTest\wpNewTest\Elements.xml" />
+    <Content Include="newTest\wpNewTest\wpNewTest.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpNewTest.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpAdministracion\wpAdministracion\Elements.xml" />
+    <Content Include="wpAdministracion\wpAdministracion\wpAdministracion.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpAdministracion.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpCarteraComeral\wpCarteraComercial\Elements.xml" />
+    <Content Include="wpCarteraComeral\wpCarteraComercial\wpCarteraComercial.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpCarteraComercial.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpClientes\wpClientes\Elements.xml" />
+    <Content Include="wpClientes\wpClientes\wpClientes.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpClientes.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpContactosEmpresa\wpContactosEmpresa\Elements.xml" />
+    <Content Include="wpContactosEmpresa\wpContactosEmpresa\wpContactosEmpresa.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpContactosEmpresa.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpCotizador\wpCotizador\Elements.xml" />
+    <Content Include="wpCotizador\wpCotizador\wpCotizador.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpCotizador.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpDatosEmpresa\wpDatosEmpresa\Elements.xml" />
+    <Content Include="wpDatosEmpresa\wpDatosEmpresa\wpDatosEmpresa.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpDatosEmpresa.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpDatosGarantias\wpDatosGarantias\Elements.xml" />
+    <Content Include="wpDatosGarantias\wpDatosGarantias\wpDatosGarantias.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpDatosGarantias.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpDatosOperacion\wpDatosOperacion\Elements.xml" />
+    <Content Include="wpDatosOperacion\wpDatosOperacion\wpDatosOperacion.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpDatosOperacion.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpDeudaSBIF\wpDeudaSBIF\Elements.xml" />
+    <Content Include="wpDeudaSBIF\wpDeudaSBIF\wpDeudaSBIF.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpDeudaSBIF.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpDevolverOperacion\wpRechazoOperacion\Elements.xml" />
+    <Content Include="wpDevolverOperacion\wpRechazoOperacion\wpRechazoOperacion.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpRechazoOperacion.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpDirecciones\wpDirecciones\Elements.xml" />
+    <Content Include="wpDirecciones\wpDirecciones\wpDirecciones.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpDirecciones.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpDirectorio\wpDirectorio\Elements.xml" />
+    <Content Include="wpDirectorio\wpDirectorio\wpDirectorio.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpDirectorio.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpDocumentosEmpresa\wpDocumentosEmpresa\Elements.xml" />
+    <Content Include="wpDocumentosEmpresa\wpDocumentosEmpresa\wpDocumentosEmpresa.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpDocumentosEmpresa.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpEdicionEmpresa\wpEdicionEmpresa\Elements.xml" />
+    <Content Include="wpEdicionEmpresa\wpEdicionEmpresa\wpEdicionEmpresa.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpEdicionEmpresa.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpEmpresaAdministracion\wpEmpresaAdministracion\Elements.xml" />
+    <Content Include="wpEmpresaAdministracion\wpEmpresaAdministracion\wpEmpresaAdministracion.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpEmpresaAdministracion.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpEmpresasRelacionadas\wpEmpresasRelacionadas\Elements.xml" />
+    <Content Include="wpEmpresasRelacionadas\wpEmpresasRelacionadas\wpEmpresasRelacionadas.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpEmpresasRelacionadas.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpEnviarComercial\wpEnviarComercial\Elements.xml" />
+    <Content Include="wpEnviarComercial\wpEnviarComercial\wpEnviarComercial.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpEnviarComercial.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpIngresoEmpresa\wpIngresoEmpresa\Elements.xml" />
+    <Content Include="wpIngresoEmpresa\wpIngresoEmpresa\wpIngresoEmpresa.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpIngresoEmpresa.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpIngresoGarantia\wpIngresoGarantia\Elements.xml" />
+    <Content Include="wpIngresoGarantia\wpIngresoGarantia\wpIngresoGarantia.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpIngresoGarantia.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpIngresoOperacion\wpIngresoOperacion\Elements.xml" />
+    <Content Include="wpIngresoOperacion\wpIngresoOperacion\wpIngresoOperacion.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpIngresoOperacion.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpListarComercial\wpListarComercial\Elements.xml" />
+    <Content Include="wpListarComercial\wpListarComercial\wpListarComercial.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpListarComercial.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpPersonas\wpPersonas\Elements.xml" />
+    <Content Include="wpPersonas\wpPersonas\wpPersonas.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpPersonas.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpProveedoresEmpresa\wpProveedoresEmpresa\Elements.xml" />
+    <Content Include="wpProveedoresEmpresa\wpProveedoresEmpresa\wpProveedoresEmpresa.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpProveedoresEmpresa.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpProveedores\wpProveedores\Elements.xml" />
+    <Content Include="wpProveedores\wpProveedores\wpProveedores.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpProveedores.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpRechazo\wpRechazo\Elements.xml" />
+    <Content Include="wpRechazo\wpRechazo\wpRechazo.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpRechazo.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpSimulacion\wpSimulacion\Elements.xml" />
+    <Content Include="wpSimulacion\wpSimulacion\wpSimulacion.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpSimulacion.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpSociosAccionistas\wpSociosAccionistas\Elements.xml" />
+    <Content Include="wpSociosAccionistas\wpSociosAccionistas\wpSociosAccionistas.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpSociosAccionistas.ascx.g.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bd\Bd.csproj">
+      <Project>{3ee075c8-21af-4fd5-85f0-7c66ffc70545}</Project>
+      <Name>Bd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClasesNegocio\ClasesNegocio.csproj">
+      <Project>{e88a112f-2e69-4eb1-8d31-d54e66f49496}</Project>
+      <Name>ClasesNegocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MultigestionUtilidades\MultigestionUtilidades.csproj">
+      <Project>{80f32748-ef52-442c-b9e7-a486dd649dfb}</Project>
+      <Name>MultigestionUtilidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="b346013c-82de-41c3-83c1-6c6b2d0de718" solutionId="b346013c-82de-41c3-83c1-6c6b2d0de718" resetWebServer="false" sharePointProductVersion="15.0" name="MultiFiscalia" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="MultigestionUtilidades.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\MultigestionUtilidades\MultigestionUtilidades.csproj" />
+    <customAssembly location="HtmlToOpenXml.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\referencias\HtmlToOpenXml.dll" />
+  </assemblies>
+  <features>
+    <featureReference itemId="04a04cd9-1eba-4c6c-8a49-fb385d48ad5d" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="3432ba21-582c-4d79-bedf-791bc5dd5641" />
+    <projectItemReference itemId="e10e2615-0ecb-453f-936d-6bba61581587" />
+    <projectItemReference itemId="fc16770e-4bae-45d0-b29a-5694da8b22f9" />
+  </projectItems>
+</package>

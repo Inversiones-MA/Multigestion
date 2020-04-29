@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6AD75FE3-1F81-43F9-892E-FD26C627091E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MultiFiscalia</RootNamespace>
+    <AssemblyName>MultiFiscalia</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ActiveDeploymentConfiguration>Default</ActiveDeploymentConfiguration>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>0</FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>C:\multigestion\Backup7\MultiGestion\MultiGestion\MultiFiscalia\</UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ProjectMode>SharePointCustomization</ProjectMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="ErrorHandling">
+      <HintPath>..\referencias\ErrorHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlToOpenXml, Version=1.5.0.0, Culture=neutral, PublicKeyToken=6ad79d83e2b60e63, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\HtmlToOpenXml.dll.1.5.0\lib\net40\HtmlToOpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.XmlTransform, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Xdt.2.1.1\lib\net40\Microsoft.Web.XmlTransform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Core, Version=2.14.0.832, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Core.2.14.0\lib\net40-Client\NuGet.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constantes.cs" />
+    <Compile Include="LogicaNegocio.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="wpCftFiscaliaExpress\wpCftFiscaliaExpress\wpCftFiscaliaExpress.ascx.cs">
+      <DependentUpon>wpCftFiscaliaExpress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpCftFiscaliaExpress\wpCftFiscaliaExpress\wpCftFiscaliaExpress.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpCftFiscaliaExpress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDevolverOperacionFiscalia\wpDevolverOperacionFiscalia\wpDevolverOperacionFiscalia.ascx.cs">
+      <DependentUpon>wpDevolverOperacionFiscalia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDevolverOperacionFiscalia\wpDevolverOperacionFiscalia\wpDevolverOperacionFiscalia.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpDevolverOperacionFiscalia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpRepresentantes\wpRepresentantes\Representantes.ascx.cs">
+      <DependentUpon>Representantes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpRepresentantes\wpRepresentantes\Representantes.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Representantes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpAprobacionSolicitud\wpAprobacionSolicitud\wpAprobacionSolicitud.ascx.cs">
+      <DependentUpon>wpAprobacionSolicitud.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpAprobacionSolicitud\wpAprobacionSolicitud\wpAprobacionSolicitud.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpAprobacionSolicitud.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDocumentosFiscalia\wpDocumentosFiscalia\wpDocumentosFiscalia.ascx.cs">
+      <DependentUpon>wpDocumentosFiscalia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpDocumentosFiscalia\wpDocumentosFiscalia\wpDocumentosFiscalia.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpDocumentosFiscalia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpListarFiscalia\wpListarFiscalia\wpListarFiscalia.ascx.cs">
+      <DependentUpon>wpListarFiscalia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpListarFiscalia\wpListarFiscalia\wpListarFiscalia.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpListarFiscalia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpServiciosLegalesEmpresa\wpServiciosLegalesEmpresa\wpServiciosLegalesEmpresa.ascx.cs">
+      <DependentUpon>wpServiciosLegalesEmpresa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpServiciosLegalesEmpresa\wpServiciosLegalesEmpresa\wpServiciosLegalesEmpresa.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpServiciosLegalesEmpresa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpServiciosLegalesGarantia\wpServiciosLegalesGarantia\wpServiciosLegalesGarantia.ascx.cs">
+      <DependentUpon>wpServiciosLegalesGarantia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpServiciosLegalesGarantia\wpServiciosLegalesGarantia\wpServiciosLegalesGarantia.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpServiciosLegalesGarantia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpSolicitudFiscalia\wpSolicitudFiscalia\wpSolicitudFiscalia.ascx.cs">
+      <DependentUpon>wpSolicitudFiscalia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wpSolicitudFiscalia\wpSolicitudFiscalia\wpSolicitudFiscalia.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wpSolicitudFiscalia.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{04a04cd9-1eba-4c6c-8a49-fb385d48ad5d}</FeatureId>
+    </None>
+    <None Include="Images\MultiFiscalia\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fc16770e-4bae-45d0-b29a-5694da8b22f9}</SharePointProjectItemId>
+    </None>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e10e2615-0ecb-453f-936d-6bba61581587}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3432ba21-582c-4d79-bedf-791bc5dd5641}</SharePointProjectItemId>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Package\Package.package">
+      <PackageId>{b346013c-82de-41c3-83c1-6c6b2d0de718}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="wpCftFiscaliaExpress\wpCftFiscaliaExpress\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{025d1815-ab0b-4e37-ad75-82f19cdd68a8}</SharePointProjectItemId>
+    </None>
+    <None Include="wpCftFiscaliaExpress\wpCftFiscaliaExpress\wpCftFiscaliaExpress.webpart" />
+    <None Include="wpDevolverOperacionFiscalia\wpDevolverOperacionFiscalia\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{49ac8a69-b803-48db-a320-e6b9604ee894}</SharePointProjectItemId>
+    </None>
+    <None Include="wpDevolverOperacionFiscalia\wpDevolverOperacionFiscalia\wpDevolverOperacionFiscalia.webpart" />
+    <None Include="wpRepresentantes\wpRepresentantes\Representantes.webpart" />
+    <None Include="wpRepresentantes\wpRepresentantes\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{01c34570-6815-4cba-ab3b-8294538f9703}</SharePointProjectItemId>
+    </None>
+    <None Include="wpAprobacionSolicitud\wpAprobacionSolicitud\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bdb80d01-5eba-4454-9a59-3601c23d14a3}</SharePointProjectItemId>
+    </None>
+    <None Include="wpAprobacionSolicitud\wpAprobacionSolicitud\wpAprobacionSolicitud.webpart" />
+    <None Include="wpDocumentosFiscalia\wpDocumentosFiscalia\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e62e6f39-0216-4a6c-a75e-d682174ed473}</SharePointProjectItemId>
+    </None>
+    <None Include="wpDocumentosFiscalia\wpDocumentosFiscalia\wpDocumentosFiscalia.webpart" />
+    <None Include="wpListarFiscalia\wpListarFiscalia\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{35304e44-701e-4ced-930a-840a9348efc8}</SharePointProjectItemId>
+    </None>
+    <None Include="wpListarFiscalia\wpListarFiscalia\wpListarFiscalia.webpart" />
+    <None Include="wpServiciosLegalesEmpresa\wpServiciosLegalesEmpresa\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d43623f9-2f92-488e-b606-9253abed41b3}</SharePointProjectItemId>
+    </None>
+    <None Include="wpServiciosLegalesEmpresa\wpServiciosLegalesEmpresa\wpServiciosLegalesEmpresa.webpart" />
+    <None Include="wpServiciosLegalesGarantia\wpServiciosLegalesGarantia\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c9a59072-b8fa-4735-b2d9-a03540dd7558}</SharePointProjectItemId>
+    </None>
+    <None Include="wpServiciosLegalesGarantia\wpServiciosLegalesGarantia\wpServiciosLegalesGarantia.webpart" />
+    <None Include="wpSolicitudFiscalia\wpSolicitudFiscalia\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a28adf29-3fbc-4546-86f1-9c96531c6731}</SharePointProjectItemId>
+    </None>
+    <None Include="wpSolicitudFiscalia\wpSolicitudFiscalia\wpSolicitudFiscalia.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="Images\MultiFiscalia\animated-overlay.gif" />
+    <Content Include="Images\MultiFiscalia\Buscar.png" />
+    <Content Include="Images\MultiFiscalia\Datos.png" />
+    <Content Include="Images\MultiFiscalia\Directorio.png" />
+    <Content Include="Images\MultiFiscalia\Documentos.png" />
+    <Content Include="Images\MultiFiscalia\documentos2.png" />
+    <Content Include="Images\MultiFiscalia\Editar.png" />
+    <Content Include="Images\MultiFiscalia\Eliminar.png" />
+    <Content Include="Images\MultiFiscalia\Empresa.png" />
+    <Content Include="Images\MultiFiscalia\EmpresaRelacionada.png" />
+    <Content Include="Images\MultiFiscalia\Enviar.png" />
+    <Content Include="Images\MultiFiscalia\FBuscar.png" />
+    <Content Include="Images\MultiFiscalia\FDatos.png" />
+    <Content Include="Images\MultiFiscalia\FDirectorio.png" />
+    <Content Include="Images\MultiFiscalia\FDocumentos.png" />
+    <Content Include="Images\MultiFiscalia\FEmpresa.png" />
+    <Content Include="Images\MultiFiscalia\FEmpresaRelacionada.png" />
+    <Content Include="Images\MultiFiscalia\FEnviar.png" />
+    <Content Include="Images\MultiFiscalia\FGarantia.png" />
+    <Content Include="Images\MultiFiscalia\FNegocio.png" />
+    <Content Include="Images\MultiFiscalia\FSociosAccionistas.png" />
+    <Content Include="Images\MultiFiscalia\Garantia.png" />
+    <Content Include="Images\MultiFiscalia\Negocio.png" />
+    <Content Include="Images\MultiFiscalia\SociosAccionistas.png" />
+    <Content Include="Images\MultiFiscalia\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Images\MultiFiscalia\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Images\MultiFiscalia\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Images\MultiFiscalia\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Images\MultiFiscalia\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Images\MultiFiscalia\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Images\MultiFiscalia\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Images\MultiFiscalia\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Images\MultiFiscalia\ui-icons_222222_256x240.png" />
+    <Content Include="Images\MultiFiscalia\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Images\MultiFiscalia\ui-icons_454545_256x240.png" />
+    <Content Include="Images\MultiFiscalia\ui-icons_888888_256x240.png" />
+    <Content Include="Images\MultiFiscalia\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Layouts\MultiFiscalia\accounting.js" />
+    <Content Include="Layouts\MultiFiscalia\Fiscalia.js" />
+    <Content Include="Layouts\MultiFiscalia\FuncionesCliente.js" />
+    <Content Include="Layouts\MultiFiscalia\FuncionesClientes.js" />
+    <Content Include="Layouts\MultiFiscalia\jquery-1.11.1.js" />
+    <Content Include="Layouts\MultiFiscalia\jquery-1.8.3.min.js" />
+    <Content Include="Layouts\MultiFiscalia\jquery-ui.css" />
+    <Content Include="Layouts\MultiFiscalia\jquery-ui.js" />
+    <Content Include="Layouts\MultiFiscalia\jquery.js" />
+    <Content Include="Layouts\MultiFiscalia\jquery.mask.js" />
+    <Content Include="Layouts\MultiFiscalia\jquery.Rut.js" />
+    <Content Include="Layouts\MultiFiscalia\jquery.ui.datepicker-es.js" />
+    <Content Include="Layouts\MultiFiscalia\jquery.validate.js" />
+    <Content Include="Layouts\MultiFiscalia\Operacion.js" />
+    <Content Include="Layouts\MultiFiscalia\PAF.js" />
+    <Content Include="Layouts\MultiFiscalia\Validaciones.js" />
+    <Content Include="Layouts\MultiFiscalia\wpDirectorio.js" />
+    <Content Include="Layouts\MultiFiscalia\wpDocumentosEmpresa.js" />
+    <Content Include="Layouts\MultiFiscalia\wpEmpresasRelacionadas.js" />
+    <Content Include="Layouts\MultiFiscalia\wpPersonas.js" />
+    <Content Include="Layouts\MultiFiscalia\wpSociosAccionistas.js" />
+    <Content Include="Layouts\MultiFiscalia\wpVaciado.js" />
+    <Content Include="Layouts\MultiFiscalia\wpValidaciones.js" />
+    <Content Include="Layouts\PagerStyle.css" />
+    <Content Include="wpCftFiscaliaExpress\wpCftFiscaliaExpress\Elements.xml" />
+    <Content Include="wpCftFiscaliaExpress\wpCftFiscaliaExpress\wpCftFiscaliaExpress.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpCftFiscaliaExpress.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpDevolverOperacionFiscalia\wpDevolverOperacionFiscalia\Elements.xml" />
+    <Content Include="wpDevolverOperacionFiscalia\wpDevolverOperacionFiscalia\wpDevolverOperacionFiscalia.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpDevolverOperacionFiscalia.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpRepresentantes\wpRepresentantes\Elements.xml" />
+    <Content Include="wpRepresentantes\wpRepresentantes\Representantes.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>Representantes.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpAprobacionSolicitud\wpAprobacionSolicitud\Elements.xml" />
+    <Content Include="wpAprobacionSolicitud\wpAprobacionSolicitud\wpAprobacionSolicitud.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpAprobacionSolicitud.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpDocumentosFiscalia\wpDocumentosFiscalia\Elements.xml" />
+    <Content Include="wpDocumentosFiscalia\wpDocumentosFiscalia\wpDocumentosFiscalia.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpDocumentosFiscalia.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpListarFiscalia\wpListarFiscalia\Elements.xml" />
+    <Content Include="wpListarFiscalia\wpListarFiscalia\wpListarFiscalia.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpListarFiscalia.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpServiciosLegalesEmpresa\wpServiciosLegalesEmpresa\Elements.xml" />
+    <Content Include="wpServiciosLegalesEmpresa\wpServiciosLegalesEmpresa\wpServiciosLegalesEmpresa.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpServiciosLegalesEmpresa.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpServiciosLegalesGarantia\wpServiciosLegalesGarantia\Elements.xml" />
+    <Content Include="wpServiciosLegalesGarantia\wpServiciosLegalesGarantia\wpServiciosLegalesGarantia.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpServiciosLegalesGarantia.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="wpSolicitudFiscalia\wpSolicitudFiscalia\Elements.xml" />
+    <Content Include="wpSolicitudFiscalia\wpSolicitudFiscalia\wpSolicitudFiscalia.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>wpSolicitudFiscalia.ascx.g.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MultigestionUtilidades\MultigestionUtilidades.csproj">
+      <Project>{80f32748-ef52-442c-b9e7-a486dd649dfb}</Project>
+      <Name>MultigestionUtilidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

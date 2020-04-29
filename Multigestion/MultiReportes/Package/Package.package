@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="d73d8b39-a767-4176-bc3c-e33edf18ddf1" solutionId="d73d8b39-a767-4176-bc3c-e33edf18ddf1" resetWebServer="false" sharePointProductVersion="15.0" name="MultiReportes" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="fdee77dc-8981-4074-8dde-2d44076f8a65" />
+  </features>
+</package>

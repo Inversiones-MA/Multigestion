@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="bbc9c61a-8a30-450c-8562-b8a3b6ab96a6" solutionId="bbc9c61a-8a30-450c-8562-b8a3b6ab96a6" resetWebServer="false" sharePointProductVersion="15.0" name="MultiContabilidad" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="MultigestionUtilidades.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\MultigestionUtilidades\MultigestionUtilidades.csproj" />
+  </assemblies>
+  <features>
+    <featureReference itemId="5c4e247d-b4c2-4f5f-afaf-0d1ee2ab79f2" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="1727b9f8-7afd-4ea0-961d-252b6f2305e2" />
+    <projectItemReference itemId="6d2ca961-05e7-4cae-a854-af908e6e16f5" />
+    <projectItemReference itemId="ea65440f-1c6b-4f35-8c9e-0ba368882185" />
+  </projectItems>
+</package>

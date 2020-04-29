@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="9c802ec5-bfee-46b3-a47d-b60cc0dffa85" solutionId="9c802ec5-bfee-46b3-a47d-b60cc0dffa85" resetWebServer="false" sharePointProductVersion="15.0" name="MultiAdmin2" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="ClasesNegocio.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\ClasesNegocio\ClasesNegocio.csproj" />
+    <projectOutputAssembly location="Bd.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\Bd\Bd.csproj" />
+    <projectOutputAssembly location="MultigestionUtilidades.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\MultigestionUtilidades\MultigestionUtilidades.csproj" />
+  </assemblies>
+  <features>
+    <featureReference itemId="5051080f-b16c-45ab-9131-7689c41faae4" />
+  </features>
+</package>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="bc23ee0a-6588-442b-b2da-5b2bc9cdb6f4" solutionId="bc23ee0a-6588-442b-b2da-5b2bc9cdb6f4" resetWebServer="false" sharePointProductVersion="15.0" name="MultiFactoring" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="MultigestionUtilidades.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\MultigestionUtilidades\MultigestionUtilidades.csproj" />
+  </assemblies>
+  <features>
+    <featureReference itemId="b5444576-7e2b-42ec-9120-bbb0edd77839" />
+  </features>
+</package>
