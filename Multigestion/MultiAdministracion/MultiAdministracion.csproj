@@ -23,7 +23,7 @@
     <FileUpgradeFlags>0</FileUpgradeFlags>
     <UpgradeBackupLocation>C:\Multigestion\Multigestion\Backup14\MultiAdministracion\</UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
-    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <FileUpgradeFlags>0</FileUpgradeFlags>
     <OldToolsVersion>4.0</OldToolsVersion>
     <ProjectMode>SharePointCustomization</ProjectMode>
     <PublishUrl>publish\</PublishUrl>
