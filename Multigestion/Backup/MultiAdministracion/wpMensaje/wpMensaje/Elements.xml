@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="wpMensaje" List="113" Url="_catalogs/wp">
+    <File Path="wpMensaje\wpMensaje.webpart" Url="MultiAdministracion_wpMensaje.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="Custom" />
+    </File>
+  </Module>
+</Elements>

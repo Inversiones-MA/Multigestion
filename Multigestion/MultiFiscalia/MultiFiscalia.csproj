@@ -19,9 +19,10 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <FileUpgradeFlags>0</FileUpgradeFlags>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
     <OldToolsVersion>4.0</OldToolsVersion>
-    <UpgradeBackupLocation>C:\Multigestion\Multigestion\Backup14\MultiFiscalia\</UpgradeBackupLocation>
+    <UpgradeBackupLocation>C:\Users\esanchez\Documents\GitHub\Multigestion\Multigestion\Multigestion\Backup\MultiFiscalia\</UpgradeBackupLocation>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <ProjectMode>SharePointCustomization</ProjectMode>
     <PublishUrl>publish\</PublishUrl>
@@ -76,6 +77,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\HtmlToOpenXml.dll.1.5.0\lib\net40\HtmlToOpenXml.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharePoint.15.0.0\lib\Microsoft.SharePoint\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.XmlTransform, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Xdt.2.1.1\lib\net40\Microsoft.Web.XmlTransform.dll</HintPath>
       <Private>True</Private>
@@ -95,7 +99,6 @@
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="Microsoft.SharePoint" />
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
