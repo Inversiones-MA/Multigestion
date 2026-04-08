@@ -1,0 +1,59 @@
+name: Notify Teams on PR Approval
+
+on:
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  notify-teams:
+    if: github.event.review.state == 'approved'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Teams notification
+        env:
+          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
+        run: |
+          PR_TITLE=$(echo '${{ github.event.pull_request.title }}' | sed 's/[\"\\]//g')
+          REVIEW_BODY=$(echo '${{ github.event.review.body }}' | sed 's/[\"\\]//g' | head -c 300)
+
+          cat <<PAYLOAD > /tmp/teams.json
+          {
+            "type": "message",
+            "attachments": [{
+              "contentType": "application/vnd.microsoft.card.adaptive",
+              "content": {
+                "\$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                "type": "AdaptiveCard",
+                "version": "1.4",
+                "body": [
+                  {
+                    "type": "TextBlock",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "text": "✅ PR Aprobado en ${{ github.repository }}"
+                  },
+                  {
+                    "type": "FactSet",
+                    "facts": [
+                      {"title": "PR:", "value": "#${{ github.event.pull_request.number }} — ${PR_TITLE}"},
+                      {"title": "Repositorio:", "value": "${{ github.repository }}"},
+                      {"title": "Autor:", "value": "${{ github.event.pull_request.user.login }}"},
+                      {"title": "Aprobado por:", "value": "${{ github.event.review.user.login }}"},
+                      {"title": "Branch:", "value": "${{ github.event.pull_request.head.ref }} → ${{ github.event.pull_request.base.ref }}"}
+                    ]
+                  }
+                ],
+                "actions": [{
+                  "type": "Action.OpenUrl",
+                  "title": "Ver Pull Request",
+                  "url": "${{ github.event.pull_request.html_url }}"
+                }]
+              }
+            }]
+          }
+          PAYLOAD
+
+          curl -sS -o /dev/null -w "HTTP %{http_code}" \
+            -H "Content-Type: application/json" \
+            -d @/tmp/teams.json \
+            "$TEAMS_WEBHOOK_URL"
